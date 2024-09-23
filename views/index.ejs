@@ -1,0 +1,46 @@
+<%- include ("partials/header.ejs") %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventario</title>
+  </head>
+
+  <body>
+    <div class="titulo">
+      <h1>Inventario</h1>
+    </div>
+    <div>
+      <form action="/submit" method="POST">
+
+        <div class="button">
+          <label class="myLabel" for="buscar"></label>
+            Filtro de búsqueda por cualquiera de las<br />
+            descripciones de las columnas
+          </label>
+          <input type="search" id="Filtro" name="filtro" placeholder="Buscar" />
+          <input type="submit" id="Buscar" value="Buscar" />
+          <input type="button" id="Limpiar" value="Limpiar" />
+          <input type="button" id="NuevoItem" value="Agregar Item" />
+          <input type="button" id="Exportar" value="Exportar a excel" />
+        </div>
+      </form>
+
+      <table id="inventario">
+        <tr>
+          <th>Fecha</th>
+          <th>Empresa</th>
+          <th>Sucursal</th>
+          <th>Departamento</th>
+          <th>Código</th>
+          <th>Descripción</th>
+          <th>Categoría</th>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Usuario</th>
+        </tr>
+      </table>
+  </body>
+</html>
